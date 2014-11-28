@@ -1,0 +1,7 @@
+<webscript>
+    <shortname>Suggestion-box POST </shortname>
+    <description>Suggestion Box POST method</description>
+    <format default="json" />
+    <authentication runas="admin">user</authentication>
+    <url>/eu/xfel/suggestion-box/suggestion</url>
+</webscript>

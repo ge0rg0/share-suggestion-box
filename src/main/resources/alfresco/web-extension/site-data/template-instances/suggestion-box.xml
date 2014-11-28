@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template-instance>
+   <template-type>eu/xfel/suggestion-box/suggestion-box</template-type>
+   <components>
+
+      <!-- Title -->
+      <component>
+         <region-id>title</region-id>
+         <url>/components/title/collaboration-title</url>
+      </component>
+
+      <!-- Toolbar -->
+      <component>
+         <region-id>navigation</region-id>
+         <url>/components/navigation/collaboration-navigation</url>
+      </component>
+
+      <!-- Suggestion Box -->
+      <component>
+         <region-id>suggestion-box</region-id>
+         <url>/eu/xfel/suggestion-box/suggestion-box</url>
+      </component>
+   </components>
+</template-instance>

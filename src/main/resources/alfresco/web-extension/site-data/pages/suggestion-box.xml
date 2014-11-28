@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <id>suggestion-box</id>
+   <page-type>suggestion-box</page-type>
+   <title>Suggestion Box</title>
+   <title-id>page.suggestion-box.title</title-id>
+   <description>Suggestion Box</description>
+   <description-id></description-id>
+   <template-instance>suggestion-box</template-instance>
+   <authentication>user</authentication>
+</page>

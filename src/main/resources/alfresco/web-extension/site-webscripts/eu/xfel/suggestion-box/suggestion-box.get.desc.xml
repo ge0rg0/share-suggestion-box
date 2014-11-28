@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Suggestion-box </shortname>
+    <description>Suggestion Box</description>
+    <family>site-dashlet</family>
+    <url>/eu/xfel/suggestion-box/suggestion-box?nodeRef={nodeRefArgument}</url>
+    <format default="html" />
+    <authentication runas="admin">user</authentication>
+</webscript>
