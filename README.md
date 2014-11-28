@@ -32,5 +32,5 @@ Log in to Alfresco Share and navigate to the site where you want to add the sugg
 
 Create a plain text document with a comma separated list of email addresses to send the suggestions to. You can save the document anywhere in the document library. It must have at least consumer rights for all site users. Copy the node reference, i.e. the last part of the url when you click on the document details. For example: workspace://SpacesStore/ae8650d8-5935-4e86-8986-47f183408814
 
-Now you can add a link to the suggestion box form anywhere in your site: http://<your_alfresco_share_url>/share/page/site/<your_site>/suggestion-box?nodeRef=<copied node reference>
+Now you can add a link to the suggestion box form anywhere in your site: http://\<your_alfresco_share_url\>/share/page/site/\<your_site\>/suggestion-box?nodeRef=\<copied node reference\>
 
