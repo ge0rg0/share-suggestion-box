@@ -10,7 +10,7 @@ Installation
 
 The dashlet is packaged as a single JAR file for easy installation into Alfresco Share.
 
-To install the dashlet, simply drop the share-suggestion-box\-\<version\>.jar file into the tomcat/shared/lib folder within your Alfresco installation, and restart the application server. You might need to create this folder if it does not already exist.
+To install the dashlet, simply drop the share-suggestion-box-1.0.jar file into the tomcat/shared/lib folder within your Alfresco installation, and restart the application server. You might need to create this folder if it does not already exist.
 
 Building from Source
 ====================
