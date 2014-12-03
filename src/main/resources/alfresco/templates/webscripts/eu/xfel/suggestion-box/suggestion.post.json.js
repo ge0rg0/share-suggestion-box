@@ -75,14 +75,14 @@ function main()
         var emailAddresses = node.content;
 
         if (!emailAddresses) {
-            javascriptlogger.debug(msg.get("email.addressees.required"));
+            logger.log(msg.get("email.addressees.required"));
             model.success = false;
             model.errormsg = msg.get("email.addressees.required");
             return;
         }
 
         if (!message) {
-            javascriptlogger.debug(msg.get("message.body.required"));
+            logger.log(msg.get("message.body.required"));
             model.success = false;
             model.errormsg = msg.get("message.body.required");
             return;
@@ -103,7 +103,7 @@ function main()
 
         } catch (e)
         {
-            javascriptlogger.error(e);
+            logger.log(e);
             model.exception = true;
             model.errormsg = e.message;
             model.success = false;
@@ -114,7 +114,7 @@ function main()
         model.success = true;
 
     } else {
-        javascriptlogger.error("Unknown error " + msg.get("email.addressees.required"));
+        logger.log("Unknown error " + msg.get("email.addressees.required"));
         model.success = false;
         model.errormsg = msg.get("email.addressees.required");
     }
@@ -127,7 +127,7 @@ function sendEmail(emailAddresses, site, sendername, email, message, template)
 
     mail.parameters.to = emailAddresses;
 
-    javascriptlogger.debug("Sending email to: " + mail.parameters.to);
+    logger.log("Sending email to: " + mail.parameters.to);
 
     // Sendername
     if (!sendername || sendername.replace(/^\s+|\s+$/gm, '') === "") {
@@ -150,14 +150,14 @@ function sendEmail(emailAddresses, site, sendername, email, message, template)
     }
     
     // Message body
-    javascriptlogger.debug("Getting email body: " + message);
+    logger.log("Getting email body: " + message);
     if (template === null) {
         if (emailAddresses !== email) {
             mail.parameters.text = msg.get("suggestion.box.email.message", [site, sendername, email, message]);
         } else {
             mail.parameters.text = msg.get("suggestion.box.email.copy", [sendername, site, message]);
         }
-        javascriptlogger.debug("Email text is: " + mail.parameters.text);
+        logger.log("Email text is: " + mail.parameters.text);
     } else {
         // Map of variables to be used in the template
         var map = new Object();
@@ -165,7 +165,7 @@ function sendEmail(emailAddresses, site, sendername, email, message, template)
         map["senderName"] = sendername;
         map["email"] = email;
         map["emailMessage"] = message.toString().replace(/\n/g, "<br />");
-        javascriptlogger.debug("Email text is: " + map["emailMessage"]);
+        logger.log("Email text is: " + map["emailMessage"]);
         mail.parameters.template = template;
          // Map of variables to be used in the template
         mail.parameters.template_model = map;
