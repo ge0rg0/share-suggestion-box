@@ -109,15 +109,17 @@
             {
                Alfresco.util.PopupManager.displayMessage(
                {
-                  text: Alfresco.util.message("suggestion.box.post.message", this.name)
+                  text: Alfresco.util.message("suggestion.box.post.message", this.name),
+                  displayTime: 8
                });
-               this.navigateToDashboard();
+               YAHOO.lang.later(10000, this, this.navigateToDashboard());
             }
             else if (response.json.message)
             {
                Alfresco.util.PopupManager.displayPrompt(
                {
-                  text: response.json.message
+                  text: response.json.message,
+                  displayTime: 8
                });
             }
          }
@@ -125,7 +127,8 @@
          {
             Alfresco.util.PopupManager.displayPrompt(
             {
-               text: Alfresco.util.message("message.failure", response.serverResponse.responseText)
+               text: Alfresco.util.message("message.failure", response.serverResponse.responseText),
+               displayTime: 8
             });
          }
       },

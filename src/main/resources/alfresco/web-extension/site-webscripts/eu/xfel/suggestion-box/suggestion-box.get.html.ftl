@@ -18,6 +18,8 @@
 
         <fieldset>
          <input type="hidden" id="${el}-nodeRef" name="nodeRef" value="${page.url.args["nodeRef"]}" />
+         <input type="hidden" id="${el}-templateRef" name="templateRef" value="${page.url.args["templateRef"]}" />
+         <input type="hidden" id="${el}-templateCopyRef" name="templateCopyRef" value="${page.url.args["templateCopyRef"]}" />
          <input type="hidden" id="${el}-site" name="site" value="${page.url.templateArgs.site}" />
         <div>
             ${msg("suggestion.box.intro")}
@@ -33,7 +35,7 @@
         </div>
         <div class="form-field row">
             <span class="label"><label for="${el}-message">${msg("suggestion.box.body")}</label></span></br>
-            <span class="input"><textarea id="${el}-message" name="message" title="${msg("suggestion.box.body")}" tabindex="3" cols="60" rows="10" style="width: 383px; height: 152px;"></textarea></span></br></br>
+            <span class="input"><textarea id="${el}-message" name="message" title="${msg("suggestion.box.body")}" tabindex="3" cols="60" rows="10" style="width: 616px; height: 305px;"></textarea></span></br></br>
         </div>
 
       <hr/>
